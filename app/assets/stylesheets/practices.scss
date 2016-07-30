@@ -1,0 +1,75 @@
+// Place all the styles related to the Practices controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  font-size: 20px !important;
+}
+
+h2 {
+  font-size: 17px !important;
+  font-weight: bold !important;
+}
+
+.title-row {
+  padding: 20px 0px;
+}
+
+.content-slider-img {
+  background-image: url(test.jpg);
+  height: 300px;
+  width: inherit;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.content-slider-title {
+  color: white;
+  height: 200px;
+  position: absolute;
+  top: 100px;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.67));
+
+  h1 {
+    margin-top: 100px;
+    padding: 0px 20px;
+  }
+}
+
+.content-slider-info {
+  color: white;
+  position: absolute;
+  bottom: 5px;
+  padding: 0px 20px;
+  width: 100%;
+
+  .count-view {
+    float: left;
+  }
+
+  .name {
+    float: right;
+  }
+}
+
+.list-cell {
+  padding: 10px 0px;
+  display: table;
+  .img {
+    width: 170px;
+    height: 120px;
+    display: table-cell;
+    vertical-align: text-top;
+  }
+  .text {
+    display: table-cell;
+    padding-left: 20px;
+    vertical-align: text-top;
+  }
+}
+
+ul.no-point {
+  list-style: none;
+}
