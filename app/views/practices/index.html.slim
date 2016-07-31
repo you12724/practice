@@ -1,49 +1,48 @@
-.container-fluid
-  .row.title-row
-    .col-md-2
-      input type="text" placeholder="気になるワードを入力"
-    .col-md-2.col-md-offset-3
-      =link_to image_tag("logo.jpg"), "https://retrip.jp/"
-    .col-md-2.col-md-offset-3
-      'まとめ
+.l-wrap
+  .l-main
+    .l-header
+      .nav
+        .nav__left
+          input type="search" placeholder="気になるワードを入力"
+        .nav__center
+          =link_to image_tag("logo.jpg"), "https://retrip.jp/"
+        .nav__right
+          'まとめ
 
-  .row
-    .col-md-4.no-padding
-      a.content-slider href="http://ruby-rails.hatenadiary.com/entry/20140929/1411997071"
-        .content-slider-img
-          .content-slider-title
-            h1 旅先でのお土産に！"可愛い雑貨"で溢れている世界の美しい街10選
-        p.content-slider-info
-          span.count-view 4135
-          span.name aaaa
+    .l-front
+      .display-table
+        .article
+           .article__thumnail
+              = image_tag 'test.jpg'
+           .article__body
+              .article__body__title
+                 h1.articleTitle 旅先でのお土産に！"可愛い雑貨"で溢れている世界の美しい街10選
+              .article__body__bottoms
+                  .article__body__bottoms__right
+                      .articleViewNum 213
+                  .article__body__bottoms__left
+                      .articleWriter 213
 
-    .col-md-4.no-padding
-      a.content-slider href="http://ruby-rails.hatenadiary.com/entry/20140929/1411997071"
-        .content-slider-img
-          .content-slider-title
-            h1 日本でも見られる！「ステンドグラス」が神秘的で美しい建物10選
+        .article
+           .article__thumnail
+              = image_tag 'test.jpg'
+           .article__body
+              .article__body__title
+                 h1.articleTitle 信玄餅もアイスに！「ご当地アイス」を味わえる東京都内のアンテナショップ7店
+              .article__body__bottoms
+                  .article__body__bottoms__right
+                      .articleViewNum 213
+                  .article__body__bottoms__left
+                      .articleWriter 213
 
-    .col-md-4.no-padding
-      a.content-slider href="http://ruby-rails.hatenadiary.com/entry/20140929/1411997071"
-        .content-slider-img
-          .content-slider-title
-            h1 信玄餅もアイスに！「ご当地アイス」を味わえる東京都内のアンテナショップ7店
-
-.container
-  .row
-    .col-md-8
-      .sub-title
-        h2 注目のまとめ
-      ul.no-point.ul-table
-        - 10.times.each do
-          li
-            .list-cell
-              =link_to image_tag("test.jpg", size: "170x120"), "https://retrip.jp", {class: "img"}
-              span.text
-                a href="https://retrip.jp"
-                  h1 銭湯がカフェに大変身！京都で話題のリノベーションカフェ「嵯峨野湯」とは
-                span.sub-title sssssssss
-
-    .col-md-4
-      .sub-title
-        h2 エリア一覧
+        .article
+           .article__thumnail
+              = image_tag 'test.jpg'
+           .article__body
+              .article__body__title
+                 h1.articleTitle 日本でも見られる！「ステンドグラス」が神秘的で美しい建物10選
+              .article__body__bottoms
+                  .article__body__bottoms__right
+                      .articleViewNum 213
+                  .article__body__bottoms__left
+                      .articleWriter 213
