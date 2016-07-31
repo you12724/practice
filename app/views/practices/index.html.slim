@@ -1,48 +1,166 @@
 .l-wrap
   .l-main
     .l-header
-      .nav
-        .nav__left
-          input type="search" placeholder="気になるワードを入力"
-        .nav__center
-          =link_to image_tag("logo.jpg"), "https://retrip.jp/"
-        .nav__right
-          'まとめ
+      .header__nav
+        .header__nav__left
+          input.verticalCenter type="search" placeholder="気になるワードを入力"
+        .header__nav__right
+          span.verticalCenter まとめ
+        .header__nav__center
+          =link_to image_tag("logo.jpg"), "https://retrip.jp/", {class: 'verticalCenter'}
 
     .l-front
       .display-table
-        .article
-           .article__thumnail
-              = image_tag 'test.jpg'
-           .article__body
-              .article__body__title
-                 h1.articleTitle 旅先でのお土産に！"可愛い雑貨"で溢れている世界の美しい街10選
-              .article__body__bottoms
-                  .article__body__bottoms__right
-                      .articleViewNum 213
-                  .article__body__bottoms__left
-                      .articleWriter 213
+        -3.times.each do
+          .article
+             .article__thumnail
+                = image_tag 'test.jpg'
+             .article__body
+                .article__body__title
+                   h1.articleTitle.whiteText 旅先でのお土産に！"可愛い雑貨"で溢れている世界の美しい街10選
+                .article__body__bottoms
+                    .article__body__bottoms__right
+                        .articleViewNum.whiteText 213
+                    .article__body__bottoms__left
+                        .articleWriter.whiteText 213
 
-        .article
-           .article__thumnail
-              = image_tag 'test.jpg'
-           .article__body
-              .article__body__title
-                 h1.articleTitle 信玄餅もアイスに！「ご当地アイス」を味わえる東京都内のアンテナショップ7店
-              .article__body__bottoms
-                  .article__body__bottoms__right
-                      .articleViewNum 213
-                  .article__body__bottoms__left
-                      .articleWriter 213
+    .l-mainWrap
+      .l-cont
+        .pickup
+          .pickup__title
+            h2 注目のまとめ
+          .pickup__list
+            -27.times.each do
+              .pickup__list__cell
+                .pickup__list__cell__thumb
+                  =link_to image_tag('test.jpg', size: '170x120')
+                .pickup__list__cell__body
+                  .pickup__list__cell__title
+                    h1 絶対ハズさない！もんじゃの聖地“月島”の絶品「もんじゃ焼き」5選
+                  .grayText
+                    .pickup__list__cell__desc
+                      .listArticleDesc お好み焼きや焼きそばに次いで人気の鉄板料理が「もんじゃ焼き」。全国にはも...
+                    .pickup__list__cell__detail
+                      span.detail__date
+                        span.detailDate 2016年7月30日
+                      span.detail__view-num
+                        span.articleViewNum 2222
+                      '  |
+                      span.detail__author
+                        span.articleWriter apple
+          .pickup__pagination
 
-        .article
-           .article__thumnail
-              = image_tag 'test.jpg'
-           .article__body
-              .article__body__title
-                 h1.articleTitle 日本でも見られる！「ステンドグラス」が神秘的で美しい建物10選
-              .article__body__bottoms
-                  .article__body__bottoms__right
-                      .articleViewNum 213
-                  .article__body__bottoms__left
-                      .articleWriter 213
+      .l-side
+        .area
+          .area__title
+            h2 エリア一覧
+          ul.area__list
+            -8.times.each do
+              li.area__list__cell
+                span.area__list__cell__image
+                  =link_to image_tag('test1.jpg', size: '50x50'), "https://retrip.jp/"
+                span.area__list__cell__title
+                  =link_to '日本', "https://retrip.jp/"
+          .area__link
+            a.areaLink.glayText href="https://retrip.jp/" エリア一覧 >
+
+        .tag
+          .tag__title
+            h2 人気おすすめタグ
+          ul.tag__list
+           -8.times.each do
+            li.tag__list__item
+              =link_to '# ポケモンGO', 'https://retrip.jp/'
+          .tag__link
+            a.tagLink.glayText href='https://retrip.jp/' 人気のおすすめタグ一覧 >
+
+        .rank
+          .rank__title
+            h2 人気ランキング
+          ul.rank__list
+            -5.times.each do
+              li.rank__list__item
+                span.rank__list__item__thumb
+                  =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
+                span.rank__list__item__title
+                  a.rankTitle href="https://retrip.jp/" まるで夢を見ているよう！“数時間で消えてしまう”日本の幻想的な絶景6選
+
+        .feature
+          .feature__title
+            h2 ピックアップ特集
+          ul.feature__list
+            -5.times.each do
+              li.feature__list__item
+                span.feature__list__item__thumb
+                  =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
+                span.feature__list__item__title
+                  a.featureTitle href="https://retrip.jp/" 夏のハワイ特集
+          .feature__link
+            a.featureLink.glayText href='https://retrip.jp/' 全ての特集 >
+
+        .recommend
+          .recommend__title
+            h2 おすすめのまとめ
+          ul.recommend__list
+            -5.times.each do
+              li.recommend__list__item
+                span.recommend__list__item__thumb
+                  =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
+                span.recommend__list__item__title
+                  a.recommendTitle href="https://retrip.jp/" ハリウッドだけじゃない！あなたにピッタリなLAの楽しみ方を診断！
+
+
+        .follow
+          .follow__title
+            h2 RETRIPをフォロー
+          .follow__desc
+            span.followDesc RETRIP（リトリップ）は旅行キュレーションメディアです！インターネット上で見つけた、あらゆる旅行・おでかけ情報を自由に組み合わせ、保存、紹介することが出来ます。
+
+    .l-footer
+      .footer__induction
+        .glayBack
+          .footer__induction__cont
+            span.footer__induction__cont__thumb
+              =image_tag('footer.jpg', size: '250x230')
+            span.footer__induction__cont__body
+              h2.inductionTitle アプリなら、RETRIPがもっと便利に快適に！
+              span.inductionDesc 話題のカフェから絶景まで、最新の旅行・おでかけ情報をどこよりも早く毎日配信！最新のおでかけ情報が分かるイベントカレンダーや便利なお気に入り機能で、RETRIPがもっと快適に。
+      .footer__nav
+        .footer__nav__body
+          .footer__nav__body__left
+            h2.footerNavTitle エリア一覧
+            ul.footer__nav__body__left__list
+              li.footerNavLeftListItem 日本
+              li.footerNavLeftListItem 北米
+              li.footerNavLeftListItem 中南米
+              li.footerNavLeftListItem アメリカ
+              li.footerNavLeftListItem 中東
+              li.footerNavLeftListItem アジア
+              li.footerNavLeftListItem ヨーロッパ
+              li.footerNavLeftListItem オセアニア
+            h2.footerNavTitle 人気のタグ
+            ul.footer__nav__body__left__list
+              li.footerNavLeftListItem 東京のホテル
+              li.footerNavLeftListItem 東京のグルメ
+              li.footerNavLeftListItem ポケモンGO
+              li.footerNavLeftListItem ディズニー
+              li.footerNavLeftListItem 世界の絶景
+          .footer__nav__body__right
+            h2.footerNavTitle RETRIPについて
+            ul.footer__nav__body__right__list
+              li.footerNavLeftRightItem トップページ
+              li.footerNavLeftRightItem タグ一覧
+              li.footerNavLeftRightItem 運営会社
+              li.footerNavLeftRightItem RETRIPについて
+              li.footerNavLeftRightItem キュレータープログラム
+              li.footerNavLeftRightItem 公式ブログ
+              li.footerNavLeftRightItem 特集一覧
+              li.footerNavLeftRightItem よくある質問
+              li.footerNavLeftRightItem 利用規約
+              li.footerNavLeftRightItem エリア一覧
+              li.footerNavLeftRightItem お問い合わせ
+              li.footerNavLeftRightItem プライバシーポリシー
+      .footer
+        .glayBack.cf
+          =image_tag('logo.jpg', class: 'footer__left', width: 100)
+          .footer__copy Copyright (c) 2016 trippiece All Rights Reserve
