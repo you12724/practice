@@ -31,16 +31,16 @@
             h2 注目のまとめ
           .pickup__list
             -27.times.each do
-              .pickup__list__cell
-                .pickup__list__cell__thumb
+              .pickup__list__item
+                .pickup__list__item__thumb
                   =link_to image_tag('test.jpg', size: '170x120')
-                .pickup__list__cell__body
-                  .pickup__list__cell__title
+                .pickup__list__item__body
+                  .pickup__list__item__title
                     h1 絶対ハズさない！もんじゃの聖地“月島”の絶品「もんじゃ焼き」5選
                   .grayText
-                    .pickup__list__cell__desc
+                    .pickup__list__item__desc
                       .listArticleDesc お好み焼きや焼きそばに次いで人気の鉄板料理が「もんじゃ焼き」。全国にはも...
-                    .pickup__list__cell__detail
+                    .pickup__list__item__detail
                       span.detail__date
                         span.detailDate 2016年7月30日
                       span.detail__view-num
@@ -56,10 +56,10 @@
             h2 エリア一覧
           ul.area__list
             -8.times.each do
-              li.area__list__cell
-                span.area__list__cell__image
+              li.area__list__item
+                span.area__list__item__image
                   =link_to image_tag('test1.jpg', size: '50x50'), "https://retrip.jp/"
-                span.area__list__cell__title
+                span.area__list__item__title
                   =link_to '日本', "https://retrip.jp/"
           .area__link
             a.areaLink.glayText href="https://retrip.jp/" エリア一覧 >
