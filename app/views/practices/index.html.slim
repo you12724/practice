@@ -3,70 +3,73 @@
     .l-header
       .header__nav
         .header__nav__left
-          input.verticalCenter type="search" placeholder="気になるワードを入力"
+          input type="search" placeholder="気になるワードを入力"
         .header__nav__right
-          span.verticalCenter まとめ
+          span まとめ
         .header__nav__center
-          =link_to image_tag("logo.jpg"), "https://retrip.jp/", {class: 'verticalCenter'}
+          =link_to image_tag("logo.jpg"), "https://retrip.jp/"
 
     .l-front
-      .display-table
+      .front
         -3.times.each do
-          .article
-             .article__thumnail
-                = image_tag 'test.jpg'
-             .article__body
-                .article__body__title
+          .front__article
+             .front__article__thumnail
+                = image_tag 'test.jpg', class: 'front__article__thumnail__img'
+             .front__article__body
+                .front__article__body__title
                    h1.articleTitle.whiteText 旅先でのお土産に！"可愛い雑貨"で溢れている世界の美しい街10選
-                .article__body__bottoms
-                    .article__body__bottoms__right
+                .front__article__body__bottoms
+                    span.front__article__body__bottoms__right
                         .articleViewNum.whiteText 213
-                    .article__body__bottoms__left
+                    span.front__article__body__bottoms__left
                         .articleWriter.whiteText 213
 
     .l-mainWrap
       .l-cont
         .pickup
           .pickup__title
-            h2 注目のまとめ
+            h2.subTitle 注目のまとめ
           .pickup__list
             -27.times.each do
-              .pickup__list__item
-                .pickup__list__item__thumb
-                  =link_to image_tag('test.jpg', size: '170x120')
-                .pickup__list__item__body
-                  .pickup__list__item__title
-                    h1 絶対ハズさない！もんじゃの聖地“月島”の絶品「もんじゃ焼き」5選
-                  .grayText
-                    .pickup__list__item__desc
-                      .listArticleDesc お好み焼きや焼きそばに次いで人気の鉄板料理が「もんじゃ焼き」。全国にはも...
-                    .pickup__list__item__detail
-                      span.detail__date
-                        span.detailDate 2016年7月30日
-                      span.detail__view-num
-                        span.articleViewNum 2222
-                      '  |
-                      span.detail__author
-                        span.articleWriter apple
+              .listItemFrame
+                .pickup__list__item
+                  .pickup__list__item__thumb
+                    =link_to image_tag('test.jpg', size: '170x120')
+                  .pickup__list__item__body
+                    .pickup__list__item__title
+                      h1.articleTitle 絶対ハズさない！もんじゃの聖地“月島”の絶品「もんじゃ焼き」5選
+                    .grayText
+                      .pickup__list__item__desc
+                        .listArticleDesc お好み焼きや焼きそばに次いで人気の鉄板料理が「もんじゃ焼き」。全国にはも...
+                      .pickup__list__item__detail
+                        span.detail__date
+                          span.detailDate 2016年7月30日
+                        span.detail__view-num
+                          span.articleViewNum 2222
+                        '  |
+                        span.detail__author
+                          span.articleWriter apple
           .pickup__pagination
 
       .l-side
         .area
           .area__title
-            h2 エリア一覧
+            h2.subTitle エリア一覧
           ul.area__list
             -8.times.each do
               li.area__list__item
-                span.area__list__item__image
-                  =link_to image_tag('test1.jpg', size: '50x50'), "https://retrip.jp/"
-                span.area__list__item__title
-                  =link_to '日本', "https://retrip.jp/"
+                .listItemFrame
+                  .area__list__item__cont
+                    span.area__list__item__cont__thumb
+                      =link_to image_tag('test1.jpg', size: '50x50'), "https://retrip.jp/"
+                    span.area__list__item__cont__title
+                      =link_to '日本', "https://retrip.jp/"
           .area__link
             a.areaLink.glayText href="https://retrip.jp/" エリア一覧 >
 
         .tag
           .tag__title
-            h2 人気おすすめタグ
+            h2.subTitle 人気おすすめタグ
           ul.tag__list
            -8.times.each do
             li.tag__list__item
@@ -76,43 +79,49 @@
 
         .rank
           .rank__title
-            h2 人気ランキング
+            h2.subTitle 人気ランキング
           ul.rank__list
             -5.times.each do
               li.rank__list__item
-                span.rank__list__item__thumb
-                  =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
-                span.rank__list__item__title
-                  a.rankTitle href="https://retrip.jp/" まるで夢を見ているよう！“数時間で消えてしまう”日本の幻想的な絶景6選
+                .listItemFrame
+                  .rank__list__item__cont
+                    span.rank__list__item__cont__thumb
+                      =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
+                    span.rank__list__item__cont__title
+                      a.rankTitle href="https://retrip.jp/" まるで夢を見ているよう！“数時間で消えてしまう”日本の幻想的な絶景6選
 
         .feature
           .feature__title
-            h2 ピックアップ特集
+            h2.subTitle ピックアップ特集
           ul.feature__list
             -5.times.each do
               li.feature__list__item
-                span.feature__list__item__thumb
-                  =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
-                span.feature__list__item__title
-                  a.featureTitle href="https://retrip.jp/" 夏のハワイ特集
+                .listItemFrame
+                  .feature__list__item__cont
+                    span.feature__list__item__cont__thumb
+                      =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
+                    span.feature__list__item__cont__title
+                      a.featureTitle href="https://retrip.jp/" 夏のハワイ特集
           .feature__link
             a.featureLink.glayText href='https://retrip.jp/' 全ての特集 >
 
         .recommend
           .recommend__title
-            h2 おすすめのまとめ
+            h2.subTitle おすすめのまとめ
           ul.recommend__list
             -5.times.each do
               li.recommend__list__item
-                span.recommend__list__item__thumb
-                  =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
-                span.recommend__list__item__title
-                  a.recommendTitle href="https://retrip.jp/" ハリウッドだけじゃない！あなたにピッタリなLAの楽しみ方を診断！
+                .listItemFrame
+                  .recommend__list__item__cont
+                    span.recommend__list__item__cont__thumb
+                      =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
+                    span.recommend__list__item__cont__title
+                      a.recommendTitle href="https://retrip.jp/" ハリウッドだけじゃない！あなたにピッタリなLAの楽しみ方を診断！
 
 
         .follow
           .follow__title
-            h2 RETRIPをフォロー
+            h2.subTitle RETRIPをフォロー
           .follow__desc
             span.followDesc RETRIP（リトリップ）は旅行キュレーションメディアです！インターネット上で見つけた、あらゆる旅行・おでかけ情報を自由に組み合わせ、保存、紹介することが出来ます。
 
