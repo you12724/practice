@@ -14,15 +14,16 @@
       .front
         -3.times.each do
           .front__child
-            .articleBig
-             .articleBig__body
-                .articleBig__body__title
-                   h1.articleTitle.whiteText 旅先でのお土産に！"可愛い雑貨"で溢れている世界の美しい街10選
-                .articleBig__body__meta
-                  span.articleBig__body__meta__right
-                      .articleViewNum.whiteText 213
-                  span.articleBig__body__meta__left
-                      .articleWriter.whiteText 213
+            a href="https://retrip.jp/"
+              .articleBig
+               .articleBig__body
+                  .articleBig__body__title
+                     h1.articleTitle.whiteText 旅先でのお土産に！"可愛い雑貨"で溢れている世界の美しい街10選
+                  .articleBig__body__meta
+                    span.articleBig__body__meta__right
+                        .articleViewNum.whiteText 213
+                    span.articleBig__body__meta__left
+                        .articleWriter.whiteText 213
 
     .l-mainWrap
       .l-cont
@@ -34,10 +35,11 @@
               .pickup__list__item
                 .articleMid
                   .articleMid__thumb
-                    =link_to image_tag('test.jpg', size: '170x120')
+                    =link_to image_tag('test.jpg', size: '170x120', class: 'linkImage')
                   .articleMid__body
                     .articleMid__body__title
-                      h1.articleTitle 絶対ハズさない！もんじゃの聖地“月島”の絶品「もんじゃ焼き」5選
+                      a href="https://retrip.jp/"
+                        h1.articleTitle 絶対ハズさない！もんじゃの聖地“月島”の絶品「もんじゃ焼き」5選
                     .grayText
                       .articleMid__body__desc
                         .listArticleDesc お好み焼きや焼きそばに次いで人気の鉄板料理が「もんじゃ焼き」。全国にはも...
@@ -60,7 +62,7 @@
               li.area__list__item
                 .areaSmall
                   span.areaSmall__thumb
-                    =link_to image_tag('test1.jpg', size: '50x50', class: 'circleImage'), "https://retrip.jp/"
+                    =link_to image_tag('test1.jpg', size: '50x50', class: 'circleImage linkImage'), "https://retrip.jp/"
                   span.areaSmall__title
                     =link_to '日本', "https://retrip.jp/"
           .area__link
@@ -84,7 +86,7 @@
               li.rank__list__item
                 .articleSmall
                   span.articleSmall__thumb
-                    =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
+                    =link_to image_tag('test.jpg', size: '70x70', class: 'linkImage'), "https://retrip.jp/"
                   span.articleSmall__title
                     a.rankTitle href="https://retrip.jp/" まるで夢を見ているよう！“数時間で消えてしまう”日本の幻想的な絶景6選
 
@@ -96,7 +98,7 @@
               li.feature__list__item
                 .articleSmall
                   span.articleSmall__thumb
-                    =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
+                    =link_to image_tag('test.jpg', size: '70x70', class: 'linkImage'), "https://retrip.jp/"
                   span.articleSmall__title
                     a.featureTitle href="https://retrip.jp/" 夏のハワイ特集
           .feature__link
@@ -110,7 +112,7 @@
               li.recommend__list__item
                 .articleSmall
                   span.articleSmall__thumb
-                    =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
+                    =link_to image_tag('test.jpg', size: '70x70', class: 'linkImage'), "https://retrip.jp/"
                   span.articleSmall__title
                     a.recommendTitle href="https://retrip.jp/" ハリウッドだけじゃない！あなたにピッタリなLAの楽しみ方を診断！
 
@@ -126,7 +128,7 @@
         .glayBack
           .footer__induction__cont
             span.footer__induction__cont__thumb
-              =image_tag('footer.jpg', size: '250x230')
+              =image_tag('footer.jpg', size: '250x230', class: 'linkImage')
             span.footer__induction__cont__body
               h2.inductionTitle アプリなら、RETRIPがもっと便利に快適に！
               span.inductionDesc 話題のカフェから絶景まで、最新の旅行・おでかけ情報をどこよりも早く毎日配信！最新のおでかけ情報が分かるイベントカレンダーや便利なお気に入り機能で、RETRIPがもっと快適に。
