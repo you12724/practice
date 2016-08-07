@@ -91,46 +91,43 @@ ul {
   width: 100%;
   height: 300px;
 
-  .front__article {
+  .front__child {
     display: table-cell;
     width: 33.3%;
     position: relative;
     height: 100%;
+  }
+}
 
-    .front__article__thumnail {
-      width: 100%;
+.articleBig {
+  background-image: url(test.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
 
-      .front__article__thumnail__img {
-        width: 100%;
-        height: 300px;
-      }
+  .articleBig__body {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100px;
+    padding: 100px 5% 0;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5));
+
+    .articleBig__body__title {
+
     }
 
-    .front__article__body {
-      position: absolute;
-      top: 100px;
-      width: 90%;
-      height: 200px;
-      padding: 0 5%;
+    .articleBig__body__meta {
+      @extend .cf;
 
-      .front__article__body__title {
-        position: absolute;
-        top: 100px;
+      .articleBig__body__meta__right {
+        float: right;
       }
 
-      .front__article__body__bottoms {
-        @extend .cf;
-        width: 90%;
-        position: absolute;
-        top: 160px;
-
-        .front__article__body__bottoms__right {
-          float: right;
-        }
-
-        .front__article__body__bottoms__left {
-          float: left;
-        }
+      .articleBig__body__meta__left {
+        float: left;
       }
     }
   }
@@ -143,17 +140,21 @@ ul {
 .pickup__list__item {
   padding: 20px 0;
   @extend .cf;
+  @extend .listItemFrame;
+}
 
-  .pickup__list__item__thumb {
+.articleMid {
+  .articleMid__thumb {
     float: left;
   }
 
-  .pickup__list__item__body {
+  .articleMid__body {
     float: left;
     width: 500px;
     padding: 0 10px;
   }
 }
+
 
 /*
   side
@@ -170,22 +171,7 @@ ul {
     .area__list__item {
       width: 50%;
       float: left;
-
-      .area__list__item__cont {
-        padding: 5px 0;
-        display: table;
-
-        .area__list__item__cont__thumb {
-          display: table-cell;
-          vertical-align: middle;
-        }
-
-        .area__list__item__cont__title {
-          display: table-cell;
-          vertical-align: middle;
-          padding-left: 10px;
-        }
-      }
+      @extend .listItemFrame;
     }
   }
 }
@@ -211,22 +197,7 @@ ul {
     list-style: none;
 
     .rank__list__item {
-
-      .rank__list__item__cont {
-        display: table;
-        padding: 10px 0;
-
-        .rank__list__item__cont__thumb {
-          display: table-cell;
-          vertical-align: middle;
-        }
-
-        .rank__list__item__cont__title {
-          display: table-cell;
-          vertical-align: middle;
-          padding-left: 20px;
-        }
-      }
+      @extend .listItemFrame;
     }
   }
 }
@@ -238,22 +209,7 @@ ul {
     list-style: none;
 
     .feature__list__item {
-
-      .feature__list__item__cont {
-        display: table;
-        padding: 10px 0;
-
-        .feature__list__item__cont__thumb {
-          display: table-cell;
-          vertical-align: middle;
-        }
-
-        .feature__list__item__cont__title {
-          display: table-cell;
-          vertical-align: middle;
-          padding-left: 20px;
-        }
-      }
+      @extend .listItemFrame;
     }
   }
 }
@@ -265,23 +221,40 @@ ul {
     list-style: none;
 
     .recommend__list__item {
-
-      .recommend__list__item__cont {
-        display: table;
-        padding: 10px 0;
-
-        .recommend__list__item__cont__thumb {
-          display: table-cell;
-          vertical-align: middle;
-        }
-
-        .recommend__list__item__cont__title {
-          display: table-cell;
-          vertical-align: middle;
-          padding-left: 20px;
-        }
-      }
+      @extend .listItemFrame;
     }
+  }
+}
+
+.areaSmall {
+  padding: 5px 0;
+  display: table;
+
+  .areaSmall__thumb {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .areaSmall__title {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+  }
+}
+
+.articleSmall {
+  display: table;
+  padding: 10px 0;
+
+  .articleSmall__thumb {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .articleSmall__title {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
   }
 }
 
@@ -379,10 +352,6 @@ ul {
 
 .whiteText {
   color: white;
-}
-
-.imageFilter {
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.67));
 }
 
 .grayText {

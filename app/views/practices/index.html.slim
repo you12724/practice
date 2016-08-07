@@ -13,16 +13,15 @@
     .l-front
       .front
         -3.times.each do
-          .front__article
-             .front__article__thumnail
-                = image_tag 'test.jpg', class: 'front__article__thumnail__img'
-             .front__article__body
-                .front__article__body__title
+          .front__child
+            .articleBig
+             .articleBig__body
+                .articleBig__body__title
                    h1.articleTitle.whiteText 旅先でのお土産に！"可愛い雑貨"で溢れている世界の美しい街10選
-                .front__article__body__bottoms
-                  span.front__article__body__bottoms__right
+                .articleBig__body__meta
+                  span.articleBig__body__meta__right
                       .articleViewNum.whiteText 213
-                  span.front__article__body__bottoms__left
+                  span.articleBig__body__meta__left
                       .articleWriter.whiteText 213
 
     .l-mainWrap
@@ -32,23 +31,23 @@
             h2.subTitle 注目のまとめ
           .pickup__list
             -27.times.each do
-              .listItemFrame
-                .pickup__list__item
-                  .pickup__list__item__thumb
+              .pickup__list__item
+                .articleMid
+                  .articleMid__thumb
                     =link_to image_tag('test.jpg', size: '170x120')
-                  .pickup__list__item__body
-                    .pickup__list__item__title
+                  .articleMid__body
+                    .articleMid__body__title
                       h1.articleTitle 絶対ハズさない！もんじゃの聖地“月島”の絶品「もんじゃ焼き」5選
                     .grayText
-                      .pickup__list__item__desc
+                      .articleMid__body__desc
                         .listArticleDesc お好み焼きや焼きそばに次いで人気の鉄板料理が「もんじゃ焼き」。全国にはも...
-                      .pickup__list__item__detail
-                        span.detail__date
+                      .articleMid__body__meta
+                        span.articleMid__body__meta__date
                           span.detailDate 2016年7月30日
-                        span.detail__view-num
+                        span.articleMid__body__meta__viewNum
                           span.articleViewNum 2222
                         '  |
-                        span.detail__author
+                        span.articleMid__body__meta__writer
                           span.articleWriter apple
           .pickup__pagination
 
@@ -59,12 +58,11 @@
           ul.area__list
             -8.times.each do
               li.area__list__item
-                .listItemFrame
-                  .area__list__item__cont
-                    span.area__list__item__cont__thumb
-                      =link_to image_tag('test1.jpg', size: '50x50', class: 'circleImage'), "https://retrip.jp/"
-                    span.area__list__item__cont__title
-                      =link_to '日本', "https://retrip.jp/"
+                .areaSmall
+                  span.areaSmall__thumb
+                    =link_to image_tag('test1.jpg', size: '50x50', class: 'circleImage'), "https://retrip.jp/"
+                  span.areaSmall__title
+                    =link_to '日本', "https://retrip.jp/"
           .area__link
             a.areaLink.glayText href="https://retrip.jp/" エリア一覧 >
 
@@ -84,12 +82,11 @@
           ul.rank__list
             -5.times.each do
               li.rank__list__item
-                .listItemFrame
-                  .rank__list__item__cont
-                    span.rank__list__item__cont__thumb
-                      =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
-                    span.rank__list__item__cont__title
-                      a.rankTitle href="https://retrip.jp/" まるで夢を見ているよう！“数時間で消えてしまう”日本の幻想的な絶景6選
+                .articleSmall
+                  span.articleSmall__thumb
+                    =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
+                  span.articleSmall__title
+                    a.rankTitle href="https://retrip.jp/" まるで夢を見ているよう！“数時間で消えてしまう”日本の幻想的な絶景6選
 
         .feature
           .feature__title
@@ -97,12 +94,11 @@
           ul.feature__list
             -5.times.each do
               li.feature__list__item
-                .listItemFrame
-                  .feature__list__item__cont
-                    span.feature__list__item__cont__thumb
-                      =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
-                    span.feature__list__item__cont__title
-                      a.featureTitle href="https://retrip.jp/" 夏のハワイ特集
+                .articleSmall
+                  span.articleSmall__thumb
+                    =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
+                  span.articleSmall__title
+                    a.featureTitle href="https://retrip.jp/" 夏のハワイ特集
           .feature__link
             a.featureLink.glayText href='https://retrip.jp/' 全ての特集 >
 
@@ -112,12 +108,11 @@
           ul.recommend__list
             -5.times.each do
               li.recommend__list__item
-                .listItemFrame
-                  .recommend__list__item__cont
-                    span.recommend__list__item__cont__thumb
-                      =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
-                    span.recommend__list__item__cont__title
-                      a.recommendTitle href="https://retrip.jp/" ハリウッドだけじゃない！あなたにピッタリなLAの楽しみ方を診断！
+                .articleSmall
+                  span.articleSmall__thumb
+                    =link_to image_tag('test.jpg', size: '70x70'), "https://retrip.jp/"
+                  span.articleSmall__title
+                    a.recommendTitle href="https://retrip.jp/" ハリウッドだけじゃない！あなたにピッタリなLAの楽しみ方を診断！
 
 
         .follow
