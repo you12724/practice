@@ -3,9 +3,10 @@
     .l-header
       .header__nav
         .header__nav__left
-          input type="search" placeholder="気になるワードを入力"
+          input class='searchBox' type="text" placeholder="気になるワードを入力"
+          input type='button'
         .header__nav__right
-          span まとめ
+          span まとめをつくる
         .header__nav__center
           =link_to image_tag("logo.jpg"), "https://retrip.jp/"
 
@@ -19,10 +20,10 @@
                 .front__article__body__title
                    h1.articleTitle.whiteText 旅先でのお土産に！"可愛い雑貨"で溢れている世界の美しい街10選
                 .front__article__body__bottoms
-                    span.front__article__body__bottoms__right
-                        .articleViewNum.whiteText 213
-                    span.front__article__body__bottoms__left
-                        .articleWriter.whiteText 213
+                  span.front__article__body__bottoms__right
+                      .articleViewNum.whiteText 213
+                  span.front__article__body__bottoms__left
+                      .articleWriter.whiteText 213
 
     .l-mainWrap
       .l-cont
@@ -61,7 +62,7 @@
                 .listItemFrame
                   .area__list__item__cont
                     span.area__list__item__cont__thumb
-                      =link_to image_tag('test1.jpg', size: '50x50'), "https://retrip.jp/"
+                      =link_to image_tag('test1.jpg', size: '50x50', class: 'circleImage'), "https://retrip.jp/"
                     span.area__list__item__cont__title
                       =link_to '日本', "https://retrip.jp/"
           .area__link
