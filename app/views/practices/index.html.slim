@@ -3,8 +3,17 @@
     .l-header
       .header__nav
         .header__nav__left
-          input class='searchBox' type="text" placeholder="気になるワードを入力"
-          input type='button'
+          .searchForm
+            .searchForm__input
+              form class='searchForm__input__form'
+                input class='searchForm__input__form__text' type="text" placeholder="気になるワードを入力"
+                input class='searchForm__input__form__button' type='button'
+            ul.searchForm__candidates.hide
+              -8.times do
+                li.searchForm__candidates__item
+                  span.searchForm__candidates__item__title # test
+
+
         .header__nav__right
           span まとめをつくる
         .header__nav__center
